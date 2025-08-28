@@ -109,9 +109,13 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>IVI\Lib_x64\msc</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>IVI\Lib_x64\msc;IVI\Bin</AdditionalLibraryDirectories>
       <AdditionalDependencies>IVI/Lib_x64/msc/AqMD3.lib;IVI/Lib_x64/msc/AqLio.lib;IVI/Lib_x64/msc/IviConfigServer.lib;IVI/Lib_x64/msc/IviCShared.lib;IVI/Lib_x64/msc/IviFloat.lib</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y /D /R "IVI\Lib_x64\msc\*.dll" "$(OutDir)"
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>

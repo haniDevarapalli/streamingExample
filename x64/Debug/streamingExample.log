@@ -1,3 +1,8 @@
 ﻿  streamingExample.cpp
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
   streamingExample.vcxproj -> C:\Users\Hani\Desktop\acquirisStreamingExample\streamingExample\x64\Debug\streamingExample.exe
+  IVI\Lib_x64\msc\AqLio_64.dll
+  IVI\Lib_x64\msc\AqMD3_64.dll
+  IVI\Lib_x64\msc\IviConfigServerCAPI_64.dll
+  IVI\Lib_x64\msc\IviCShared_64.dll
+  4 File(s) copied
