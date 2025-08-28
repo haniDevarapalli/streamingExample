@@ -1,0 +1,1541 @@
+FPAttributeValueFile
+n SubType="IVI"
+n SubVersion="1"
+
+v AcquisitionMode DataType="i"
+ AQMD3_VAL_ACQUISITION_MODE_NORMAL (0)
+  "Selects normal digitizer mode"
+
+ AQMD3_VAL_ACQUISITION_MODE_USER_FDK (15)
+  "Selects user FDK mode. Requires FDK option."
+
+ AQMD3_VAL_ACQUISITION_MODE_AVERAGER (1)
+  "Selects averager mode."
+
+ AQMD3_VAL_ACQUISITION_MODE_PEAK_DETECTION (2)
+  "Selects peak detection mode."
+
+ AQMD3_VAL_ACQUISITION_MODE_BASE_BAND0 (3)
+  "Selects Base Band 0 acquisition mode."
+
+ AQMD3_VAL_ACQUISITION_MODE_DIGITAL_DOWN_CONVERSION (4)
+  "Selects DigitalDownConversion acquisition mode."
+
+ AQMD3_VAL_ACQUISITION_MODE_PEAK_LIST (5)
+  "Selects PeakList mode. Requires PKL option."
+
+
+v DataReductionMode DataType="i"
+ AQMD3_VAL_ACQUISITION_DATA_REDUCTION_MODE_DISABLED (0)
+  "Disables data reduction."
+
+ AQMD3_VAL_ACQUISITION_DATA_REDUCTION_MODE_ZERO_SUPPRESS (1)
+  "Enables zero suppress compression."
+
+
+v UserControlCountersMode DataType="i"
+ AQMD3_VAL_USER_CONTROL_COUNTERS_MODE_NORMAL (0)
+  "Configures the User Control Counters in Standard mode."
+
+ AQMD3_VAL_USER_CONTROL_COUNTERS_MODE_STREAMING (1)
+  "Configures the User Control Counters in Streaming mode."
+
+
+v UserControlInterSegmentDelayMode DataType="i"
+ AQMD3_VAL_USER_CONTROL_INTER_SEGMENT_DELAY_MODE_SOFTWARE (0)
+  "Configures the User Control Inter Segment Delay to use Software value."
+
+ AQMD3_VAL_USER_CONTROL_INTER_SEGMENT_DELAY_MODE_USER_FIRMWARE (1)
+  "Configures the User Control Inter Segment Delay to be controlled by User Firmware."
+
+
+v UserControlTriggerEnableSource DataType="i"
+ AQMD3_VAL_USER_CONTROL_TRIGGER_ENABLE_SOURCE_SEGMENTATION (0)
+  "Configures the use of the Trigger Enable signal from the Segmentation mechanism."
+
+ AQMD3_VAL_USER_CONTROL_TRIGGER_ENABLE_SOURCE_USER_FIRMWARE (1)
+  "Configures the use of the Trigger Enable custom signal from the User Firmware."
+
+
+v UserControlTriggerSelection DataType="i"
+ AQMD3_VAL_USER_CONTROL_TRIGGER_SELECTION_ANALOG (0)
+  "Configures the use of the Trigger coming from the analog source."
+
+ AQMD3_VAL_USER_CONTROL_TRIGGER_SELECTION_DIGITAL (1)
+  "Configures the use of the Trigger coming from the digital source."
+
+
+v StreamingMode DataType="i"
+ AQMD3_VAL_STREAMING_MODE_DISABLED (0)
+  "Disables streaming."
+
+ AQMD3_VAL_STREAMING_MODE_CONTINUOUS (1)
+  "Enables streaming in CSR mode (Continuous Simultaneous acquisition and Readout). "
+  "Refer to the Product User Manual for more details."
+
+ AQMD3_VAL_STREAMING_MODE_TRIGGERED (2)
+  "Enables streaming in CST mode (Continuous Simultaneous acquisition and readout with "
+  "Trigger). Refer to the Product User Manual for more details."
+
+ AQMD3_VAL_STREAMING_MODE_TRIGGERED_COUNT (3)
+  "Enables streaming in CST mode (Continuous Simultaneous acquisition and readout with "
+  "Trigger). Streaming acquisition terminates when the acquisition of the number records "
+  "to acquire is complete."
+
+
+v StreamType DataType="i"
+ AQMD3_VAL_STREAM_TYPE_MARKERS (0)
+  "A stream of this type provides time markers related to acquired or emulated samples."
+
+ AQMD3_VAL_STREAM_TYPE_MIN_MAX (1)
+  "A stream of this type provides min-max pairs computed over a frame of acquired or "
+  "emulated samples."
+
+ AQMD3_VAL_STREAM_TYPE_SAMPLES (2)
+  "A stream of this type provides acquired or emulated data samples."
+
+
+v BaselineCorrectionMode DataType="i"
+ AQMD3_VAL_BASELINE_CORRECTION_MODE_DISABLED (0)
+  "Disables baseline correction."
+
+ AQMD3_VAL_BASELINE_CORRECTION_MODE_CONTINUOUS (1)
+  "Selects continuous baseline correction mode. In this mode the data values for baseline "
+  "correction are accumulated continuously, even during an acquisition."
+
+ AQMD3_VAL_BASELINE_CORRECTION_MODE_BETWEEN_ACQUISITIONS (2)
+  "Selects between acquisitions baseline correction mode. In this mode the data values "
+  "for baseline correction are only accumulated between acquisitions."
+
+
+v BaselineCorrectionPulsePolarity DataType="i"
+ AQMD3_VAL_BASELINE_CORRECTION_PULSE_POLARITY_NEGATIVE (0)
+  "Specifies a negative polarity signal pulse."
+
+ AQMD3_VAL_BASELINE_CORRECTION_PULSE_POLARITY_POSITIVE (1)
+  "Specifies a positive polarity signal pulse."
+
+
+v PeakListDataStorageMode DataType="i"
+ AQMD3_VAL_PEAK_LIST_DATA_STORAGE_MODE_NONE (0)
+  "Disables storage of PeakList data."
+
+ AQMD3_VAL_PEAK_LIST_DATA_STORAGE_MODE_RAW (1)
+  "Selects storage of raw samples."
+
+ AQMD3_VAL_PEAK_LIST_DATA_STORAGE_MODE_FILTERED (2)
+  "Selects storage of filtered samples."
+
+ AQMD3_VAL_PEAK_LIST_DATA_STORAGE_MODE_FILTERED_DERIVATIVE (3)
+  "Selects storage of filtered derivative samples."
+
+
+v PeakListDescriptorFormat DataType="i"
+ AQMD3_VAL_PEAK_LIST_DESCRIPTOR_FORMAT_EXTENDED (0)
+  "Both trigger and peak descriptors are 256-bit. Peak descriptors contain peak coordinate, "
+  "center of mass and sum of squares information."
+
+ AQMD3_VAL_PEAK_LIST_DESCRIPTOR_FORMAT_PEAK (1)
+  "Both Trigger and Peak descriptors are 128-bit. Peak descriptors contain peak coordinates."
+
+ AQMD3_VAL_PEAK_LIST_DESCRIPTOR_FORMAT_CENTER_OF_MASS (2)
+  "Both Trigger and Peak descriptors are 128-bit. Peak descriptors contain center of "
+  "mass coordinates."
+
+ AQMD3_VAL_PEAK_LIST_DESCRIPTOR_FORMAT_PEAK_AREA (3)
+  "Both Trigger and Peak descriptors are 128-bit. Peak descriptors contain peak area "
+  "information."
+
+ AQMD3_VAL_PEAK_LIST_DESCRIPTOR_FORMAT_CUSTOM1 (5)
+  "Both Trigger and Peak descriptors are 128-bit. Custom format for peak descriptors."
+
+
+v SelfTriggerMode DataType="i"
+ AQMD3_VAL_SELF_TRIGGER_MODE_CUSTOM_WAVE (0)
+  "Sets SelfTrigger mode to Custom Wave. The SelfTrigger core must be configured with "
+  "the 'SelfTriggerCustomWaveLoadConfigurationFile()' function."
+
+ AQMD3_VAL_SELF_TRIGGER_MODE_SQUARE_WAVE (1)
+  "Sets SelfTrigger mode to Square Wave. The square wave parameters can be adapted through "
+  "the 'SelfTriggerSquareWaveConfigure()' function."
+
+ AQMD3_VAL_SELF_TRIGGER_MODE_ARMED_PULSE (2)
+  "Sets SelfTrigger mode to Armed Pulse. Refer to the Product User Manual for more details."
+
+
+v TriggerSlope2 DataType="i"
+ AQMD3_VAL_TRIGGER_SLOPE_NEGATIVE (0)
+  "A negative (falling) edge passing through the trigger level triggers the digitizer."
+
+ AQMD3_VAL_TRIGGER_SLOPE_POSITIVE (1)
+  "A positive (rising) edge passing through the trigger level triggers the digitizer."
+
+
+v TriggerSlope DataType="i"
+ AQMD3_VAL_TRIGGER_SLOPE_NEGATIVE (0)
+  "A negative (falling) edge passing through the trigger level triggers the digitizer."
+
+ AQMD3_VAL_TRIGGER_SLOPE_POSITIVE (1)
+  "A positive (rising) edge passing through the trigger level triggers the digitizer."
+
+
+v LogicDeviceStreamMode DataType="i"
+ AQMD3_VAL_LOGIC_DEVICE_STREAM_MODE_ACQUISITION (0)
+  "In Acquisition mode, the LogicDevice receives actual values from the ADC. This is "
+  "the default mode."
+
+ AQMD3_VAL_LOGIC_DEVICE_STREAM_MODE_EMULATION (1)
+  "In Emulation mode, the LogicDevice receives the values that have been uploaded to "
+  "each stream using WriteStreamWaveformInt16()."
+
+ AQMD3_VAL_LOGIC_DEVICE_STREAM_MODE_SEQUENTIAL (2)
+  "Reserved."
+
+
+v LogicDeviceMemoryBankAccessControl DataType="i"
+ AQMD3_VAL_LOGIC_DEVICE_MEMORY_BANK_ACCESS_CONTROL_SOFTWARE (0)
+  "Software control of LogicDevice MemoryBank. In this mode, the value of LogicDevice "
+  "Memory Access Mode indicates whether the memory is used for reading or writing."
+
+ AQMD3_VAL_LOGIC_DEVICE_MEMORY_BANK_ACCESS_CONTROL_USER_FIRMWARE (1)
+  "Custom control of LogicDevice MemoryBank from the User Firmware. In this mode, the "
+  "User Firmware controls accesses to the memory, and the value of LogicDevice Memory "
+  "Acces Mode is ignored."
+
+
+v LogicDeviceMemoryBankAccessMode DataType="i"
+ AQMD3_VAL_LOGIC_DEVICE_MEMORY_BANK_ACCESS_MODE_WRITE (0)
+  "Under Software LogicDevice MemoryBank Access Control, this value indicates that the "
+  "memory is currently used for Writing."
+
+ AQMD3_VAL_LOGIC_DEVICE_MEMORY_BANK_ACCESS_MODE_READ (1)
+  "Under Software LogicDevice MemoryBank Access Control, this value indicates that the "
+  "memory is currently used for Reading."
+
+
+v CalibrationEqualization DataType="i"
+ AQMD3_VAL_CALIBRATION_EQUALIZATION_OFF (0)
+  "Disables the equalization filter."
+
+ AQMD3_VAL_CALIBRATION_EQUALIZATION_CUSTOM (1)
+  "Selects the Custom equalization filter."
+
+ AQMD3_VAL_CALIBRATION_EQUALIZATION_SMOOTH_ROLL_OFF (2)
+  "Selects the Smooth Roll-off equalization filter."
+
+ AQMD3_VAL_CALIBRATION_EQUALIZATION_SHARP_ROLL_OFF (3)
+  "Selects the Sharp Roll-off equalization filter."
+
+
+v ControlIOState DataType="i"
+ AQMD3_VAL_CONTROL_IO_STATE_LOW (0)
+  "Represents the Low ControlIO state."
+
+ AQMD3_VAL_CONTROL_IO_STATE_HIGH (1)
+  "Represents the High ControlIO state."
+
+ AQMD3_VAL_CONTROL_IO_STATE_UNDETERMINED (2)
+  "Represents an Undetermined ControlIO state."
+
+
+v ControlIOInputTermination DataType="i"
+ AQMD3_VAL_CONTROL_IO_INPUT_TERMINATION_WEAK_PULL_UP (0)
+  "Disables 50 Ohm input termination."
+
+ AQMD3_VAL_CONTROL_IO_INPUT_TERMINATION_PULL_DOWN (1)
+  "Enables 50 Ohm input termination."
+
+
+v DigitalOutputPulsePolarity DataType="i"
+ AQMD3_VAL_DIGITAL_OUTPUT_PULSE_POLARITY_NEGATIVE (0)
+
+ AQMD3_VAL_DIGITAL_OUTPUT_PULSE_POLARITY_POSITIVE (1)
+
+
+v DigitalOutputMode DataType="i"
+ AQMD3_VAL_DIGITAL_OUTPUT_MODE_DISABLED (0)
+
+ AQMD3_VAL_DIGITAL_OUTPUT_MODE_LOW_LEVEL (1)
+
+ AQMD3_VAL_DIGITAL_OUTPUT_MODE_HIGH_LEVEL (2)
+
+ AQMD3_VAL_DIGITAL_OUTPUT_MODE_BURST (3)
+
+ AQMD3_VAL_DIGITAL_OUTPUT_MODE_PERIODIC (4)
+
+
+v TemperatureUnits DataType="i"
+ AQMD3_VAL_CELSIUS (0)
+  "Temperature values returned from the digitizer are in degrees Celsius."
+
+ AQMD3_VAL_FAHRENHEIT (1)
+  "Temperature values returned from the digitizer are in degrees Fahrenheit."
+
+ AQMD3_VAL_KELVIN (2)
+  "Temperature values returned from the digitizer are in degrees Kelvin."
+
+
+v AcquisitionStatusResult DataType="i"
+ AQMD3_VAL_ACQUISITION_STATUS_RESULT_TRUE (1)
+  "The digitizer is currently in the queried state."
+
+ AQMD3_VAL_ACQUISITION_STATUS_RESULT_FALSE (2)
+  "The digitizer is not currently in the queried state."
+
+ AQMD3_VAL_ACQUISITION_STATUS_RESULT_UNKNOWN (3)
+  "The driver cannot query the instrument to determine if the digitizer is in the queried "
+  "state."
+
+
+v VerticalCoupling DataType="i"
+ AQMD3_VAL_VERTICAL_COUPLING_AC (0)
+  "The digitizer AC couples the input signal."
+
+ AQMD3_VAL_VERTICAL_COUPLING_DC (1)
+  "The digitizer DC couples the input signal."
+
+ AQMD3_VAL_VERTICAL_COUPLING_GND (2)
+  "The digitizer couples the channel to the ground."
+
+
+v ReferenceOscillatorSource DataType="i"
+ AQMD3_VAL_REFERENCE_OSCILLATOR_SOURCE_INTERNAL (0)
+  "The internal reference oscillator is used."
+
+ AQMD3_VAL_REFERENCE_OSCILLATOR_SOURCE_EXTERNAL (1)
+  "An external reference oscillator is used."
+
+
+v SampleClockSource DataType="i"
+ AQMD3_VAL_SAMPLE_CLOCK_SOURCE_INTERNAL (0)
+  "The internal sample clock is used."
+
+ AQMD3_VAL_SAMPLE_CLOCK_SOURCE_EXTERNAL (1)
+  "An external sample clock is used."
+
+
+v TriggerCoupling DataType="i"
+ AQMD3_VAL_TRIGGER_COUPLING_AC (0)
+  "The digitizer AC couples the trigger signal."
+
+ AQMD3_VAL_TRIGGER_COUPLING_DC (1)
+  "The digitizer DC couples the trigger signal."
+
+ AQMD3_VAL_TRIGGER_COUPLING_NOISE_REJECT (4)
+  "The digitizer filters out the noise from the arm signal."
+
+ AQMD3_VAL_TRIGGER_COUPLING_HF_REJECT (2)
+  "The digitizer filters out the high frequencies from the arm signal."
+
+ AQMD3_VAL_TRIGGER_COUPLING_LF_REJECT (3)
+  "The digitizer filters out the low frequencies from the arm signal."
+
+
+v TriggerType DataType="i"
+ AQMD3_VAL_EDGE_TRIGGER (1)
+  "Configures the digitizer for edge triggering. An edge trigger occurs when the trigger "
+  "signal specified with the Trigger Source attribute passes the voltage threshold specified "
+  "with the Trigger Level attribute and has the slope specified with the Trigger Slope "
+  "attribute."
+
+ AQMD3_VAL_WIDTH_TRIGGER (2)
+  "Configures the digitizer for width triggering. Use the IviDigitizerWidthTrigger extension "
+  "properties and methods to configure the trigger."
+
+ AQMD3_VAL_RUNT_TRIGGER (3)
+  "Configures the digitizer for runt triggering. Use the IviDigitizerRuntTrigger extension "
+  "properties and methods to configure the trigger."
+
+ AQMD3_VAL_GLITCH_TRIGGER (4)
+  "Configures the digitizer for glitch triggering. Use the IviDigitizerGlitchTrigger "
+  "extension properties and methods to configure the trigger."
+
+ AQMD3_VAL_TV_TRIGGER (5)
+  "Configures the digitizer for triggering on TV signals. Use the IviDigitizerTVTrigger "
+  "extension properties and methods to configure the trigger."
+
+ AQMD3_VAL_WINDOW_TRIGGER (6)
+  "Configures the digitizer for window triggering. Use the IviDigitizerWindowTrigger "
+  "extension properties and methods to configure the trigger."
+
+
+v GlitchCondition DataType="i"
+ AQMD3_VAL_GLITCH_LESS_THAN (1)
+  "The digitizer triggers when the pulse width is less than the value you specify with "
+  "the Glitch Width attribute."
+
+ AQMD3_VAL_GLITCH_GREATER_THAN (2)
+  "The digitizer triggers when the pulse width is greater than the value you specify "
+  "with the Glitch Width attribute."
+
+
+v GlitchPolarity DataType="i"
+ AQMD3_VAL_GLITCH_POSITIVE (1)
+  "The digitizer triggers on a positive glitch."
+
+ AQMD3_VAL_GLITCH_NEGATIVE (2)
+  "The digitizer triggers on a negative glitch."
+
+ AQMD3_VAL_GLITCH_EITHER (3)
+  "The digitizer triggers on either a positive or negative glitch."
+
+
+v RuntPolarity DataType="i"
+ AQMD3_VAL_RUNT_POSITIVE (1)
+  "The digitizer triggers on a positive runt. A positive runt occurs when a rising edge "
+  "crosses the low runt threshold and does not cross the high runt threshold before "
+  "re-crossing the low runt threshold."
+
+ AQMD3_VAL_RUNT_NEGATIVE (2)
+  "The digitizer triggers on a negative runt. A negative runt occurs when a falling "
+  "edge crosses the high runt threshold and does not cross the low runt threshold before "
+  "re-crossing the high runt threshold."
+
+ AQMD3_VAL_RUNT_EITHER (3)
+  "The digitizer triggers on either a positive or negative runt."
+
+
+v TVTriggerPolarity DataType="i"
+ AQMD3_VAL_TV_POSITIVE (1)
+  "Configures the digitizer to trigger on a positive video sync pulse."
+
+ AQMD3_VAL_TV_NEGATIVE (2)
+  "Configures the digitizer to trigger on a negative video sync pulse."
+
+
+v TVTriggerEvent DataType="i"
+ AQMD3_VAL_TV_EVENT_FIELD1 (1)
+  "Sets the digitizer to trigger on field 1 of the video signal."
+
+ AQMD3_VAL_TV_EVENT_FIELD2 (2)
+  "Sets the digitizer to trigger on field 2 of the video signal."
+
+ AQMD3_VAL_TV_EVENT_ANY_FIELD (3)
+  "Sets the digitizer to trigger on any field."
+
+ AQMD3_VAL_TV_EVENT_ANY_LINE (4)
+  "Sets the digitizer to trigger on any line."
+
+ AQMD3_VAL_TV_EVENT_LINE_NUMBER (5)
+  "Sets the digitizer to trigger on a specific line number you specify with the TV Trigger "
+  "Line Number attribute."
+
+
+v TVSignalFormat DataType="i"
+ AQMD3_VAL_NTSC (1)
+  "Configures the digitizer to trigger on the NTSC signal format."
+
+ AQMD3_VAL_PAL (2)
+  "Configures the digitizer to trigger on the PAL signal format"
+
+ AQMD3_VAL_SECAM (3)
+  "Configures the digitizer to trigger on the SECAM signal format"
+
+
+v WidthPolarity DataType="i"
+ AQMD3_VAL_WIDTH_POSITIVE (1)
+  "Configures the digitizer to trigger on positive pulses that have a width that meets "
+  "the condition the user specifies with the Width Condition attribute."
+
+ AQMD3_VAL_WIDTH_NEGATIVE (2)
+  "Configures the digitizer to trigger on negative pulses that have a width that meets "
+  "the condition the user specifies with the Width Condition attribute."
+
+ AQMD3_VAL_WIDTH_EITHER (3)
+  "Configures the digitizer to trigger on either positive or negative pulses that have "
+  "a width that meets the condition the user specifies with the Width Condition attribute."
+
+
+v WidthCondition DataType="i"
+ AQMD3_VAL_WIDTH_WITHIN (1)
+  "Configures the digitizer to trigger on signals when they enter the given triggering "
+  "window. The end-user specifies the high and low thresholds with the Window Trigger "
+  "High Threshold and Window Trigger Low Threshold properties."
+
+ AQMD3_VAL_WIDTH_OUTSIDE (2)
+  "Configures the digitizer to trigger on signals when they leave the given triggering "
+  "window.  The end-user specifies the high and low thresholds with the Window Trigger "
+  "High Threshold and Window Trigger Low Threshold properties."
+
+
+v WindowCondition DataType="i"
+ AQMD3_VAL_WINDOW_CONDITION_ENTERING (1)
+  "Configures the digitizer to arm on signals when they enter the given arming window. "
+  "The end-user specifies the high and low thresholds with the Window Arm High Threshold "
+  "and Window Arm Low Threshold properties."
+
+ AQMD3_VAL_WINDOW_CONDITION_LEAVING (2)
+  "Configures the digitizer to arm on signals when they leave the given arming window. "
+  "The end-user specifies the high and low thresholds with the Window Arm High Threshold "
+  "and Window Arm Low Threshold properties."
+
+
+v TriggerSourceOperator DataType="i"
+ AQMD3_VAL_TRIGGER_SOURCE_OPERATOR_AND (0)
+  "Trigger sources are AND'd together.  The digitizer triggers when all configured trigger "
+  "source conditions are satisfied."
+
+ AQMD3_VAL_TRIGGER_SOURCE_OPERATOR_OR (1)
+  "Trigger sources are OR'd together.  The digitizer triggers when the first configured "
+  "trigger source condition is satisfied."
+
+ AQMD3_VAL_TRIGGER_SOURCE_OPERATOR_NONE (2)
+  "No operator is applied to the configured list of trigger sources.  The trigger source "
+  "list is ignored, and the digitizer triggers when the currently configured trigger "
+  "source, given by the Trigger Source attribute, and its associated trigger conditions "
+  "are satisfied."
+
+
+v TimeResetMode DataType="i"
+ AQMD3_VAL_TIME_RESET_MODE_IMMEDIATE (0)
+  "The time of the instrument will be set immediately to the time given by IVI.NET Time "
+  "property or IVI-C SetTime function."
+
+ AQMD3_VAL_TIME_RESET_MODE_ON_FIRST_TRIGGER (1)
+  "The time of the instrument will be set to the time given by IVI.NET Time property "
+  "or IVI-C SetTime function when the first trigger of the next acquisition will be "
+  "accepted."
+
+ AQMD3_VAL_TIME_RESET_MODE_ON_TRIGGER_ENABLE (2)
+  "The time of the instrument will be set to the time given by IVI.NET Time property "
+  "or IVI-C SetTime function when the next acquisition will have its trigger enabled."
+
+
+0 AqMD3_GetAttributeViInt32 3 4 false g DataType="ViInt32"
+0 AqMD3_SetAttributeViInt32 3 4 false s DataType="ViInt32"
+0 AqMD3_CheckAttributeViInt32 3 4 false s DataType="ViInt32"
+0 AqMD3_GetAttributeViInt64 3 4 false g DataType="ViInt64"
+0 AqMD3_SetAttributeViInt64 3 4 false s DataType="ViInt64"
+0 AqMD3_CheckAttributeViInt64 3 4 false s DataType="ViInt64"
+0 AqMD3_GetAttributeViReal64 3 4 false g DataType="ViReal64"
+0 AqMD3_SetAttributeViReal64 3 4 false s DataType="ViReal64"
+0 AqMD3_CheckAttributeViReal64 3 4 false s DataType="ViReal64"
+0 AqMD3_GetAttributeViSession 3 4 false g DataType="ViSession"
+0 AqMD3_SetAttributeViSession 3 4 false s DataType="ViSession"
+0 AqMD3_CheckAttributeViSession 3 4 false s DataType="ViSession"
+0 AqMD3_GetAttributeViBoolean 3 4 false g DataType="ViBoolean"
+0 AqMD3_SetAttributeViBoolean 3 4 false s DataType="ViBoolean"
+0 AqMD3_CheckAttributeViBoolean 3 4 false s DataType="ViBoolean"
+0 AqMD3_GetAttributeViString 3 5 false g DataType="ViString"
+0 AqMD3_SetAttributeViString 3 4 false s DataType="ViString"
+0 AqMD3_CheckAttributeViString 3 4 false s DataType="ViString"
+1 all "Inherent IVI Attributes"
+
+2 all "Advanced Session Information"
+
+3 all "Driver Setup" AQMD3_ATTR_DRIVER_SETUP ViString g 
+ "Read Only - The driver setup string.  It is either specified in the Configuration "
+ "Store or passed in the OptionString parameter of the Initialize function.  Driver "
+ "setup is empty if the driver is not initialized."
+
+3 all "I/O Resource Descriptor" AQMD3_ATTR_IO_RESOURCE_DESCRIPTOR ViString g 
+ "Read Only - The resource descriptor specifies the connection to a physical device. "
+ " It is either specified in the Configuration Store or passed in the ResourceName "
+ "parameter of the Initialize function.  It is empty if the driver is not initialized."
+
+3 all "Logical Name" AQMD3_ATTR_LOGICAL_NAME ViString g 
+ "Read Only - Logical Name identifies a driver session in the Configuration Store. "
+ " If Logical Name is not empty, the driver was initialized from information in the "
+ "driver session.  If it is empty, the driver was initialized without using the Configuration "
+ "Store."
+
+2 all "Driver Capabilities"
+
+3 all "Class Group Capabilities" AQMD3_ATTR_GROUP_CAPABILITIES ViString g 
+ "Read Only - A comma-separated list of the class capability groups implemented by "
+ "the driver.  Capability group names are documented in the IVI class specifications. "
+ " If the driver is not class compliant, the driver returns an empty string."
+
+3 all "Supported Instrument Models" AQMD3_ATTR_SUPPORTED_INSTRUMENT_MODELS ViString g 
+ "Read Only - A comma-separated list of instrument models that the IVI specific driver "
+ "can control. The string does not include an abbreviation for the manufacturer if "
+ "it is the same for all models."
+
+2 all "Driver Identification"
+
+3 all "Specific Driver Class Spec Major Version" AQMD3_ATTR_SPECIFIC_DRIVER_CLASS_SPEC_MAJOR_VERSION ViInt32 g 
+ "Read Only - Returns the major version number of the class specification in accordance "
+ "with which the IVI specific driver was developed. Zero is returned if the driver "
+ "is not compliant with a class specification."
+
+3 all "Specific Driver Class Spec Minor Version" AQMD3_ATTR_SPECIFIC_DRIVER_CLASS_SPEC_MINOR_VERSION ViInt32 g 
+ "Read Only - Returns the minor version number of the class specification in accordance "
+ "with which the IVI specific driver was developed. Zero is returned if the driver "
+ "is not compliant with a class specification."
+
+3 all "Specific Driver Description" AQMD3_ATTR_SPECIFIC_DRIVER_DESCRIPTION ViString g 
+ "Read Only - Returns a brief description of the IVI specific driver. The string that "
+ "this attribute returns contains a maximum of 256 bytes including the NUL byte."
+
+3 all "Specific Driver Prefix" AQMD3_ATTR_SPECIFIC_DRIVER_PREFIX ViString g 
+ "Read Only - Returns the case-sensitive prefix of the user-callable functions that "
+ "the IVI-C specific driver exports. The string that this attribute returns contains "
+ "a maximum of 32 bytes including the NUL byte."
+
+3 all "Specific Driver Revision" AQMD3_ATTR_SPECIFIC_DRIVER_REVISION ViString g 
+ "Read Only - Returns version information about the IVI specific driver. The string "
+ "that this attribute returns contains a maximum of 256 bytes including the NUL byte."
+
+3 all "Specific Driver Vendor" AQMD3_ATTR_SPECIFIC_DRIVER_VENDOR ViString g 
+ "Read Only - Returns the name of the vendor that supplies the IVI specific driver. "
+ "The string that this attribute returns contains a maximum of 256 bytes including "
+ "the NUL byte."
+
+2 all "Instrument Identification"
+
+3 all "Instrument Firmware Revision" AQMD3_ATTR_INSTRUMENT_FIRMWARE_REVISION ViString g 
+ "Read Only - The firmware revision reported by the physical instrument.  If Simulation "
+ "is enabled or the instrument is not capable of reporting the firmware revision, a "
+ "string is returned that explains the condition."
+
+3 all "Instrument Manufacturer" AQMD3_ATTR_INSTRUMENT_MANUFACTURER ViString g 
+ "Read Only - The name of the manufacturer reported by the physical instrument.  If "
+ "Simulation is enabled or the instrument is not capable of reporting the name of the "
+ "manufacturer, a string is returned that explains the condition. Manufacturer is limited "
+ "to 256 bytes"
+
+3 all "Instrument Model" AQMD3_ATTR_INSTRUMENT_MODEL ViString g 
+ "Read Only - The model number or name reported by the physical instrument.  If Simulation "
+ "is enabled or the instrument is not capable of reporting the model number or name, "
+ "a string is returned that explains the condition.  Model is limited to 256 bytes"
+
+2 all "User Options"
+
+3 all "Cache" AQMD3_ATTR_CACHE ViBoolean gs 
+ "Drivers may choose to always cache some instrument settings, never cache others, "
+ "and optionally cache others, to avoid unecessary I/O to the instrument.  If True, "
+ "the driver caches optionally cached instrument settings."
+
+3 all "Interchange Check" AQMD3_ATTR_INTERCHANGE_CHECK ViBoolean gs 
+ "Read Only - If True, the driver maintains a record of interchangeability warnings. "
+ " If the driver does not support interchangeability checking, attempts to set InterchangeCheck "
+ "to True return an error."
+
+3 all "Query Instrument Status" AQMD3_ATTR_QUERY_INSTRUMENT_STATUS ViBoolean gs 
+ "If True, the driver queries the instrument status at the end of each method or property "
+ "that performs I/O to the instrument.  If an error is reported, use ErrorQuery to "
+ "retrieve error messages one at a time from the instrument."
+
+3 all "Range Check" AQMD3_ATTR_RANGE_CHECK ViBoolean gs 
+ "Drivers may choose to always validate some property/parameter values, never validate "
+ "others, and optionally validate others, to avoid sending invalid commands to the "
+ "instrument.  If True, the driver performs optional validations."
+
+3 all "Record Value Coercions" AQMD3_ATTR_RECORD_COERCIONS ViBoolean gs 
+ "If True, the driver keeps a list of the value coercions it makes for ViInt32 and "
+ "ViReal64 attributes.  If the driver does not support coercion recording, attempts "
+ "to set RecordCoercions to True will return an error."
+
+3 all "Simulate" AQMD3_ATTR_SIMULATE ViBoolean gs 
+ "If True, the driver does not perform I/O to the instrument, and returns simulated "
+ "values for output parameters."
+
+1 all "Arm"
+
+2 all "Arm Source Count" AQMD3_ATTR_ARM_SOURCE_COUNT ViInt32 g 
+ "Not Supported - The number of arm sources."
+
+1 all "Channel"
+
+2 all "Channel Count" AQMD3_ATTR_CHANNEL_COUNT ViInt32 g 
+ "Read Only - The number of channels."
+
+2 all "Channel Enabled" AQMD3_ATTR_CHANNEL_ENABLED ViBoolean gs 
+ "Specifies whether the digitizer acquires a waveform for the channel."
+
+2 all "Input Connector Selection" AQMD3_ATTR_INPUT_CONNECTOR_SELECTION ViInt32 gs 
+ "Some digitizers include multiple connectors for each digitizer input channel.  These "
+ "connectors are often simply a matter of convenience for system cabling ? multiple "
+ "signals can be routed to the various connectors, the the desired signal can be sent "
+ "into the digitizer by changing an internal switch.  With other digitizers, the connectors "
+ "may be of different types or even different impedances.  This attribute is used to "
+ "determine which connector is to be used."
+
+2 all "Input Impedance" AQMD3_ATTR_INPUT_IMPEDANCE ViReal64 gs 
+ "The input impedance of this channel.  The units are Ohms."
+
+2 all "Time Interleaved Channel List" AQMD3_ATTR_TIME_INTERLEAVED_CHANNEL_LIST ViString gs 
+ "This attribute is used to combine this channel with one or more other channels to "
+ "achieve higher effective sampling rates and/or greater memory depth.  The string "
+ "provided here specifies which channels should operate in combined mode with the current "
+ "channel.  This attribute is a comma-separated list of one or more channel names."
+
+2 all "Vertical Coupling" AQMD3_ATTR_VERTICAL_COUPLING ViInt32 gs VerticalCoupling
+ "Specifies how the digitizer couples the input signal for the channel."
+
+2 all "Vertical Offset" AQMD3_ATTR_VERTICAL_OFFSET ViReal64 gs 
+ "The location of the center of the range that you specify with the Range attribute. "
+ " The units are Volts, with respect to ground.  For example, to acquire a sine wave "
+ "spanning 0.0 to 10.0 volts, set Offset to 5.0 volts."
+
+2 all "Vertical Range" AQMD3_ATTR_VERTICAL_RANGE ViReal64 gs 
+ "The absolute value of the input range the digitizer can acquire for the channel. "
+ " The units are Volts.  For example, to acquire a sine wave spanning -5.0 to 5.0 volts, "
+ "set Range to 10.0 volts."
+
+2 all "Filter"
+
+3 all "Input Filter Bypass" AQMD3_ATTR_INPUT_FILTER_BYPASS ViBoolean gs 
+ "Specifies whether or not to bypass the input filter."
+
+3 all "Input Filter Max Frequency" AQMD3_ATTR_INPUT_FILTER_MAX_FREQUENCY ViReal64 gs 
+ "Specifies the maximum input filter frequency.  Specifying a value of zero means that "
+ "the device should be set to the full bandwidth that the filter can deliver without "
+ "being bypassed.  The units are Hertz."
+
+3 all "Input Filter Min Frequency" AQMD3_ATTR_INPUT_FILTER_MIN_FREQUENCY ViReal64 gs 
+ "Specifies the minimum input filter frequency."
+
+1 all "Instrument Specific"
+
+2 all "Acquisition"
+
+3 all "Acquisition Downconversion Data Scaling Enabled" AQMD3_ATTR_ACQUISITION_DOWNCONVERSION_DATA_SCALING_ENABLED ViBoolean gs 
+ "Enable or disable the factor 2 scaling of downconversion data. This scaling factor "
+ "can be used to return the true input signal power of single side band signal resulting "
+ "from the data downconversion with tuning. The scaling is disabled by default."
+
+3 all "Acquisition Error On Overrange Enabled" AQMD3_ATTR_ACQUISITION_ERROR_ON_OVERRANGE_ENABLED ViBoolean gs 
+ "When set to true, all Fetch and Read methods will return an error if the ADC was "
+ "in overrange (i.e. some samples are outside of the numeric range of the ADC output)."
+
+3 all "Acquisition Mode" AQMD3_ATTR_ACQUISITION_MODE ViInt32 gs AcquisitionMode
+ "The acquisition mode."
+
+3 all "Acquisition Number Of Averages" AQMD3_ATTR_ACQUISITION_NUMBER_OF_AVERAGES ViInt32 gs 
+ "Specifies the number of waveforms to average in the record. This attribute affects "
+ "instrument behavior only when the Acquisition Mode attribute is set to Averager or "
+ "PeakDetection."
+
+3 all "DataReductionMode" AQMD3_ATTR_ACQUISITION_DATA_REDUCTION_MODE ViInt32 gs DataReductionMode
+ "The data reduction mode."
+
+3 all "Streaming"
+
+4 all "Streaming Mode" AQMD3_ATTR_STREAMING_MODE ViInt32 gs StreamingMode
+ "The Streaming Mode is set to Disabled for regular digitizer operation. It can be "
+ "set to Continuous for CSR enabled instruments. It can be set to Triggered for CST "
+ "enabled instruments."
+
+3 all "TSR"
+
+4 all "TSR Enabled" AQMD3_ATTR_TSR_ENABLED ViBoolean gs 
+ "Specifies whether TSR operation is enabled on the instrument."
+
+4 all "TSR Is Acquisition Complete" AQMD3_ATTR_TSR_IS_ACQUISITION_COMPLETE ViBoolean g 
+ "Read Only - Indicates if a (single- or multi-record) waveform can be fetched from "
+ "the instrument. Applicable only when TSR operation is enabled."
+
+4 all "TSR Memory Overflow Occurred" AQMD3_ATTR_TSR_MEMORY_OVERFLOW_OCCURRED ViBoolean g 
+ "Read Only - Indicates that no memory segment was available to acquire new data. The "
+ "instrument could therefore not accept any new triggers, and some may have been missed."
+
+3 all "UserControl"
+
+4 all "User Control Connector To User Core Latency" AQMD3_ATTR_USER_CONTROL_CONNECTOR_TO_USER_CORE_LATENCY ViReal64 g 
+ "Returns the duration between the time the signal is present on a connector, and the "
+ "time the corresponding sample enters the user core."
+
+4 all "User Control Counters Mode" AQMD3_ATTR_USER_CONTROL_COUNTERS_MODE ViInt32 gs UserControlCountersMode
+ "Specifies the Counters Mode."
+
+4 all "User Control Inter Segment Delay Mode" AQMD3_ATTR_USER_CONTROL_INTER_SEGMENT_DELAY_MODE ViInt32 gs UserControlInterSegmentDelayMode
+ "Specifies how the Inter Segment Delay is managed. In Software mode, the Inter Segment "
+ "Delay is given as a fixed number of blocks, in the Inter Segment Delay Value attribute. "
+ "In Firmware mode, the Inter Segment Delay is controlled directly by the User Firmware."
+
+4 all "User Control Inter Segment Delay Value" AQMD3_ATTR_USER_CONTROL_INTER_SEGMENT_DELAY_VALUE ViInt32 gs 
+ "Number of Inter Segments Delay blocks."
+
+4 all "User Control IO Fixed Latency Enabled" AQMD3_ATTR_USER_CONTROL_IO_FIXED_LATENCY_ENABLED ViBoolean gs 
+ "Specifies whether the IO input is propagated to the DPUs with potentially variable "
+ "latency or with guaranteed fixed latency."
+
+4 all "User Control Post Trigger" AQMD3_ATTR_USER_CONTROL_POST_TRIGGER ViInt32 gs 
+ "Number of Post-Trigger blocks."
+
+4 all "User Control Pre Trigger" AQMD3_ATTR_USER_CONTROL_PRE_TRIGGER ViInt32 gs 
+ "Number of Pre-Trigger blocks."
+
+4 all "User Control Start On Trigger Enabled" AQMD3_ATTR_USER_CONTROL_START_ON_TRIGGER_ENABLED ViBoolean gs 
+ "Specifies whether the segmentation mechanism should work in Start On Trigger mode, "
+ "or not. While in Start On Trigger mode, the PreTrigger value is ignored."
+
+4 all "User Control Trigger Enable Source" AQMD3_ATTR_USER_CONTROL_TRIGGER_ENABLE_SOURCE ViInt32 gs UserControlTriggerEnableSource
+ "Specifies the Source of the Trigger Enable, either from the Segmentation mechanism, "
+ "or from the User Firmware."
+
+4 all "User Control Trigger Factor" AQMD3_ATTR_USER_CONTROL_TRIGGER_FACTOR ViInt32 gs 
+ "Multiplicative factor for the PreTrigger and PostTrigger values, to be used with "
+ "downsampling. Default value 1."
+
+4 all "User Control Trigger Selection" AQMD3_ATTR_USER_CONTROL_TRIGGER_SELECTION ViInt32 gs UserControlTriggerSelection
+ "Specifies the source of the Trigger, either from the analog circuitry, or from the "
+ "digital user firmware."
+
+2 all "Calibration"
+
+3 all "Calibration Equalization" AQMD3_ATTR_CALIBRATION_EQUALIZATION ViInt32 gs CalibrationEqualization
+ "Parameter for self-calibration equalization."
+
+3 all "Calibration Is Required" AQMD3_ATTR_CALIBRATION_IS_REQUIRED ViBoolean g 
+ "Read Only - Returns whether or not a self calibration is required."
+
+3 all "Inter Channel Delay Enabled" AQMD3_ATTR_CALIBRATION_INTER_CHANNEL_DELAY_ENABLED ViBoolean gs 
+ "When set to true, the self-calibration will minimize the sampling delay between channels."
+
+3 all "Target Voltage Enabled" AQMD3_ATTR_CALIBRATION_TARGET_VOLTAGE_ENABLED ViBoolean gs 
+ "When set to true, the self-calibration will minimize the noise level at the channel "
+ "input value equal to Channel.CalibrationTargetVoltage. Note that when set to true, "
+ "the Channel.Offset value is taken into account in the self-calibration, and therefore "
+ "changing the Channel.CalibrationTargetVoltage value, or changing the Channel.Offset, "
+ "will require a new self-calibration."
+
+2 all "Channel"
+
+3 all "Calibration Target Voltage" AQMD3_ATTR_CHANNEL_CALIBRATION_TARGET_VOLTAGE ViReal64 gs 
+ "The value of CalibrationTargetVoltage is the channel input level at which the noise "
+ "level will be minimized by the self-calibration. This value is only used if the property "
+ "Calibration.TargetVoltageEnabled is true. The units are Volts. Note that when Calibration.TargetVoltageEnabled "
+ "is set to true, changing this value, or changing the Channel.Offset, will require "
+ "a new self-calibration."
+
+3 all "Channel Connector Name" AQMD3_ATTR_CHANNEL_CONNECTOR_NAME ViString g 
+ "Read Only - The connector name as it appears on the instrument's front panel."
+
+3 all "Channel Data Inversion Enabled" AQMD3_ATTR_CHANNEL_DATA_INVERSION_ENABLED ViBoolean gs 
+ "Specifies whether the data acquired is inverted."
+
+3 all "Channel Sampling Delay" AQMD3_ATTR_CHANNEL_SAMPLING_DELAY ViReal64 gs 
+ "The delay in seconds at which the sample is acquired from the input signal, compared "
+ "to other channels."
+
+3 all "Accumulation"
+
+4 all "BaselineCorrection"
+
+5 all "Baseline Correction Digital Offset" AQMD3_ATTR_BASELINE_CORRECTION_DIGITAL_OFFSET ViInt32 gs 
+ "Applies a digital offset after the baseline correction."
+
+5 all "Baseline Correction Mode" AQMD3_ATTR_BASELINE_CORRECTION_MODE ViInt32 gs BaselineCorrectionMode
+ "Defines the mode used during baseline correction accumulation."
+
+5 all "Baseline Correction Threshold High" AQMD3_ATTR_BASELINE_CORRECTION_THRESHOLD_HIGH ViInt32 gs 
+ "Defines the higher limit of the baseline range. Outside of this range, data values "
+ "will be ignored. This is an absolute value (from 0 to vertical range). The units "
+ "are ADC counts."
+
+5 all "Baseline Correction Threshold Low" AQMD3_ATTR_BASELINE_CORRECTION_THRESHOLD_LOW ViInt32 gs 
+ "Defines the lower limit of the baseline range. Outside of this range, data values "
+ "will be ignored. This is an absolute value (from 0 to vertical range). The units "
+ "are ADC counts."
+
+4 all "NSA"
+
+5 all "NSA Enabled" AQMD3_ATTR_NSA_ENABLED ViBoolean gs 
+ "Specifies whether the Noise Suppressed Accumulation is active. This attribute affects "
+ "instrument behavior only when the Acquisition Mode attribute is set to Averager."
+
+5 all "NSA Noise Base" AQMD3_ATTR_NSA_NOISE_BASE ViInt32 gs 
+ "Specifies the noise base value for the Noise Suppressed Accumulation. The noise base "
+ "is subtracted from data values which are higher than the configured threshold. The "
+ "units are ADC counts."
+
+5 all "NSA Threshold" AQMD3_ATTR_NSA_THRESHOLD ViInt32 gs 
+ "Specifies the threshold of the Noise Suppressed Accumulation. Each data value must "
+ "exceed the threshold value to be entered into the sum. The units are ADC counts."
+
+3 all "BaselineCorrection"
+
+4 all "Channel Baseline Correction Digital Offset" AQMD3_ATTR_CHANNEL_BASELINE_CORRECTION_DIGITAL_OFFSET ViInt32 gs 
+ "Applies a digital offset after the baseline correction. DigitalOffset is a signed "
+ "left-aligned 16-bit ADC code."
+
+4 all "Channel Baseline Correction Mode" AQMD3_ATTR_CHANNEL_BASELINE_CORRECTION_MODE ViInt32 gs BaselineCorrectionMode
+ "Defines the mode used during baseline correction."
+
+4 all "Channel Baseline Correction Pulse Polarity" AQMD3_ATTR_CHANNEL_BASELINE_CORRECTION_PULSE_POLARITY ViInt32 gs BaselineCorrectionPulsePolarity
+ "Defines pulse polarity for baseline correction."
+
+4 all "Channel Baseline Correction Pulse Threshold" AQMD3_ATTR_CHANNEL_BASELINE_CORRECTION_PULSE_THRESHOLD ViInt32 gs 
+ "Baseline pulse detection threshold, as signed left-aligned 16-bit ADC code."
+
+3 all "Filter"
+
+4 all "Input Filter Bypass Anti Aliasing" AQMD3_ATTR_INPUT_FILTER_BYPASS_ANTI_ALIASING ViBoolean gs 
+ "Specifies whether or not to bypass the anti-aliasing input filter. BypassMovingAverage "
+ "and BypassAntiAliasing cannot be both False at the same time."
+
+4 all "Input Filter Bypass Moving Average" AQMD3_ATTR_INPUT_FILTER_BYPASS_MOVING_AVERAGE ViBoolean gs 
+ "Specifies whether or not to bypass the moving average input filter. BypassMovingAverage "
+ "and BypassAntiAliasing cannot be both False at the same time."
+
+3 all "PeakDetection"
+
+4 all "Peak Detection Amplitude Accumulation Enabled" AQMD3_ATTR_PEAK_DETECTION_AMPLITUDE_ACCUMULATION_ENABLED ViBoolean gs 
+ "Selects whether the amplitude value of the peak (in ADC counts) should be accumulated "
+ "instead of a fixed value of 1 for a detected peak."
+
+4 all "Peak Detection Falling Delta" AQMD3_ATTR_PEAK_DETECTION_FALLING_DELTA ViInt32 gs 
+ "Defines the amount by which two consecutive samples must differ to be considered "
+ "as falling edge in the peak detector algorithm. The units are ADC counts."
+
+4 all "Peak Detection Rising Delta" AQMD3_ATTR_PEAK_DETECTION_RISING_DELTA ViInt32 gs 
+ "Defines the amount by which two consecutive samples must differ to be considered "
+ "as rising edge in the peak detector algorithm. The units are ADC counts."
+
+3 all "PeakList"
+
+4 all "Baseline" AQMD3_ATTR_CHANNEL_PEAK_LIST_BASELINE ViInt32 gs 
+ "Pulse value baseline. It is used for the computation of the following pulse characteristics: "
+ "sum-of-squares & center-of-mass."
+
+4 all "DataStorageMode" AQMD3_ATTR_CHANNEL_PEAK_LIST_DATA_STORAGE_MODE ViInt32 gs PeakListDataStorageMode
+ "Selects data storage mode for PeakList acquisition mode."
+
+4 all "DerivativeSmoothingLength" AQMD3_ATTR_CHANNEL_PEAK_LIST_DERIVATIVE_SMOOTHING_LENGTH ViInt32 gs 
+ "Derivative smoothing length. It determines the length of the smoothing filter that "
+ "applies to samples' derivative values."
+
+4 all "Descriptor Format" AQMD3_ATTR_CHANNEL_PEAK_LIST_DESCRIPTOR_FORMAT ViInt32 gs PeakListDescriptorFormat
+ "Specifies the format of PeakList descriptors."
+
+4 all "Observation Window Delay" AQMD3_ATTR_CHANNEL_PEAK_LIST_OBSERVATION_WINDOW_DELAY ViInt64 gs 
+ "Specifies the delay, in samples, of the observation window start with respect to "
+ "the beginning of the record."
+
+4 all "Observation Window Enabled" AQMD3_ATTR_CHANNEL_PEAK_LIST_OBSERVATION_WINDOW_ENABLED ViBoolean gs 
+ "Specifies whether the observation window is enabled."
+
+4 all "Observation Window Granularity" AQMD3_ATTR_CHANNEL_PEAK_LIST_OBSERVATION_WINDOW_GRANULARITY ViInt64 g 
+ "Specifies the granularity, in samples, of observation window Delay and Width parameters."
+
+4 all "Observation Window Width" AQMD3_ATTR_CHANNEL_PEAK_LIST_OBSERVATION_WINDOW_WIDTH ViInt64 gs 
+ "Specifies the width, in samples, of the observation window."
+
+4 all "PulseDerivativeHysteresis" AQMD3_ATTR_CHANNEL_PEAK_LIST_PULSE_DERIVATIVE_HYSTERESIS ViInt32 gs 
+ "Pulse derivative hysteresis width."
+
+4 all "PulseDerivativeThresholdFalling" AQMD3_ATTR_CHANNEL_PEAK_LIST_PULSE_DERIVATIVE_THRESHOLD_FALLING ViInt32 gs 
+ "Pulse derivative threshold falling is used for pulse detection. Falling edge is detected "
+ "when the sample values' derivative goes below the configured fall threshold minus "
+ "the configured derivative threshold hysteresis."
+
+4 all "PulseDerivativeThresholdRising" AQMD3_ATTR_CHANNEL_PEAK_LIST_PULSE_DERIVATIVE_THRESHOLD_RISING ViInt32 gs 
+ "Pulse derivative threshold rising is used for pulse detection. The rising edge of "
+ "a pulse is detected when the sample values' derivative goes above the configured "
+ "rise threshold."
+
+4 all "PulseValueThreshold" AQMD3_ATTR_CHANNEL_PEAK_LIST_PULSE_VALUE_THRESHOLD ViInt32 gs 
+ "Pulse value threshold specifies data threshold for pulse detection. A rising edge "
+ "of a pulse is detected when sample values exceed the configured threshold (the sample "
+ "value's derivative must also exceed the derivative threshold rising)."
+
+4 all "ValueSmoothingLength" AQMD3_ATTR_CHANNEL_PEAK_LIST_VALUE_SMOOTHING_LENGTH ViInt32 gs 
+ "Value smoothing length. It determines the length of the smoothing filter that applies "
+ "to sample values."
+
+3 all "ZeroSuppress"
+
+4 all "Hysteresis" AQMD3_ATTR_CHANNEL_ZERO_SUPPRESS_HYSTERESIS ViInt32 gs 
+ "Specifies the hysteresis width."
+
+4 all "Post Gate Samples" AQMD3_ATTR_CHANNEL_ZERO_SUPPRESS_POST_GATE_SAMPLES ViInt32 gs 
+ "Specifies the number of samples to be kept after gate stop condition."
+
+4 all "Pre Gate Samples" AQMD3_ATTR_CHANNEL_ZERO_SUPPRESS_PRE_GATE_SAMPLES ViInt32 gs 
+ "Specifies the number of samples to be kept before gate start condition."
+
+4 all "Threshold" AQMD3_ATTR_CHANNEL_ZERO_SUPPRESS_THRESHOLD ViInt32 gs 
+ "In ZeroSuppress DataReduction mode, the total amount of data recorded is reduced "
+ "by eliminating samples below the level of interest: Threshold. The value is specified "
+ "as a signed left-aligned 16-bit ADC code (Normal acquisition mode) or a signed 32-bit "
+ "value (Averager acquisition mode)."
+
+4 all "Zero Value" AQMD3_ATTR_CHANNEL_ZERO_SUPPRESS_ZERO_VALUE ViInt32 gs 
+ "In ZeroSuppress DataReduction mode, the value used to replace suppressed samples "
+ "in a standard waveform construct. It is a signed left-aligned 16-bit ADC code (Normal "
+ "acquisition mode) or a signed 32-bit value (Averager acquisition mode)."
+
+2 all "ControlIO"
+
+3 all "Control IO Available Signals" AQMD3_ATTR_CONTROL_IO_AVAILABLE_SIGNALS ViString g 
+ "Read Only - Comma separated list of available signal names that can be used for the "
+ "Signal attribute of this repeated capability."
+
+3 all "Control IO Count" AQMD3_ATTR_CONTROL_IO_COUNT ViInt32 g 
+ "Read Only - Returns the number of Control IO Connectors."
+
+3 all "Control Io Input Termination" AQMD3_ATTR_CONTROL_IO_INPUT_TERMINATION ViInt32 gs ControlIOInputTermination
+ "Input termination selection."
+
+3 all "Control IO Signal" AQMD3_ATTR_CONTROL_IO_SIGNAL ViString gs 
+ "Signal present on a Control IO connector."
+
+3 all "InSoftwareState" AQMD3_ATTR_CONTROL_IO_IN_SOFTWARE_STATE ViInt32 g ControlIOState
+ "Signal state present on the ControlIO connector when the currently selected Signal "
+ "is configured as In-Software."
+
+3 all "OutSoftwareState" AQMD3_ATTR_CONTROL_IO_OUT_SOFTWARE_STATE ViInt32 gs ControlIOState
+ "Signal state present on the ControlIO connector when the currently selected Signal "
+ "is configured as Out-Software."
+
+3 all "AnalogOut"
+
+4 all "Control IO Analog Out Level" AQMD3_ATTR_CONTROL_IO_ANALOG_OUT_LEVEL ViInt32 gs 
+ "Output level of the analog output, as signed 16-bit left aligned DAC code."
+
+2 all "DDCCore"
+
+3 all "DDCCore Center Frequency" AQMD3_ATTR_DDCCORE_CENTER_FREQUENCY ViReal64 gs 
+ "Specifies the center frequency, in Hz, from which the digitizer will downconvert. "
+ "It sets the local oscillator frequency."
+
+3 all "DDCCore Count" AQMD3_ATTR_DDCCORE_COUNT ViInt32 g 
+
+3 all "DDCCore Data Source" AQMD3_ATTR_DDCCORE_DATA_SOURCE ViString gs 
+ "Selects the input data source used by the DDC core (e.g. \"Channel1\")."
+
+3 all "DDCCore Decimation Denominator" AQMD3_ATTR_DDCCORE_DECIMATION_DENOMINATOR ViInt64 gs 
+ "The denominator of the fractional decimation factor. The decimation factor is applied "
+ "to the data source sample rate to determine the decimated rate used by the DDC core."
+
+3 all "DDCCore Decimation Numerator" AQMD3_ATTR_DDCCORE_DECIMATION_NUMERATOR ViInt64 gs 
+ "The numerator of the fractional decimation factor. The decimation factor is applied "
+ "to the data source sample rate to determine the decimated rate used by the DDC core."
+
+3 all "DDCCore LO Initial Phase" AQMD3_ATTR_DDCCORE_LO_INITIAL_PHASE ViReal64 gs 
+ "The initial phase of the local oscillator the DDC core will use during the downconversion."
+
+2 all "DigitalOut"
+
+3 all "Digital Out Start Source" AQMD3_ATTR_DIGITAL_OUT_START_SOURCE ViString gs 
+ "Specify the source that triggers digital output generation."
+
+3 all "Output"
+
+4 all "Digital Output Mode" AQMD3_ATTR_DIGITAL_OUTPUT_MODE ViInt32 gs DigitalOutputMode
+ "The type of signal to be generated."
+
+4 all "Digital Output Number Of Pulses" AQMD3_ATTR_DIGITAL_OUTPUT_NUMBER_OF_PULSES ViInt32 gs 
+ "The number of pulses to generate (ignored in Periodic mode)."
+
+4 all "Digital Output Pulse Delay" AQMD3_ATTR_DIGITAL_OUTPUT_PULSE_DELAY ViReal64 gs 
+ "Pulse delay in seconds."
+
+4 all "Digital Output Pulse Period" AQMD3_ATTR_DIGITAL_OUTPUT_PULSE_PERIOD ViReal64 gs 
+ "Pulse period in seconds."
+
+4 all "Digital Output Pulse Polarity" AQMD3_ATTR_DIGITAL_OUTPUT_PULSE_POLARITY ViInt32 gs DigitalOutputPulsePolarity
+ "Pulse polarity."
+
+4 all "Digital Output Pulse Width" AQMD3_ATTR_DIGITAL_OUTPUT_PULSE_WIDTH ViReal64 gs 
+ "Pulse width in seconds."
+
+4 all "Output Count" AQMD3_ATTR_DIGITAL_OUTPUT_COUNT ViInt32 g 
+
+2 all "InstrumentInfo"
+
+3 all "Instrument Info Chassis Number" AQMD3_ATTR_INSTRUMENT_INFO_CHASSIS_NUMBER ViInt32 g 
+ "Read Only - Chassis number."
+
+3 all "Instrument Info IO Version" AQMD3_ATTR_INSTRUMENT_INFO_IO_VERSION ViString g 
+ "Read Only - Version of the IO Driver used by this module."
+
+3 all "Instrument Info Nbr ADC Bits" AQMD3_ATTR_INSTRUMENT_INFO_NBR_ADC_BITS ViInt32 g 
+ "Read Only - Number of bits of data per sample from this module's ADCs."
+
+3 all "Instrument Info Options" AQMD3_ATTR_INSTRUMENT_INFO_OPTIONS ViString g 
+ "Read Only - Comma separated list of options installed in this instrument."
+
+3 all "Serial Number String" AQMD3_ATTR_INSTRUMENT_INFO_SERIAL_NUMBER_STRING ViString g 
+ "Read Only - The serial number of the instrument."
+
+3 all "MonitoringValue"
+
+4 all "Monitoring Value Count" AQMD3_ATTR_MONITORING_VALUE_COUNT ViInt32 g 
+ "Read Only - Returns the number of MonitoringValues."
+
+4 all "Monitoring Value Current Value" AQMD3_ATTR_MONITORING_VALUE_CURRENT_VALUE ViReal64 g 
+ "Read Only - Returns the current monitored value of the MonitoringValue."
+
+4 all "Monitoring Value Limit High" AQMD3_ATTR_MONITORING_VALUE_LIMIT_HIGH ViReal64 g 
+ "Read Only - Returns the limit value above which the instrument behavior may not be "
+ "consistent with the specifications."
+
+4 all "Monitoring Value Limit Low" AQMD3_ATTR_MONITORING_VALUE_LIMIT_LOW ViReal64 g 
+ "Read Only - Returns the limit value below which the instrument behavior may not be "
+ "consistent with the specifications."
+
+4 all "Monitoring Value Unit" AQMD3_ATTR_MONITORING_VALUE_UNIT ViString g 
+ "Read Only - Returns the unit of this monitoring value."
+
+2 all "LogicDevice"
+
+3 all "Logic Device Count" AQMD3_ATTR_LOGIC_DEVICE_COUNT ViInt32 g 
+ "Read Only - Returns the number of logic devices."
+
+3 all "Logic Device Firmware Store Count" AQMD3_ATTR_LOGIC_DEVICE_FIRMWARE_STORE_COUNT ViInt32 g 
+ "Read Only - Number of available firmware stores in the LogicDevice."
+
+3 all "Logic Device Load From Store Ecc Warning Occured" AQMD3_ATTR_LOGIC_DEVICE_LOAD_FROM_STORE_ECC_WARNING_OCCURRED ViBoolean g 
+ "Read Only [FDK Only] - A True value indicates that during the last retrieve operation "
+ "from a Firmware Store, the ECC system detected and corrected one or more errors in "
+ "the stored firmware. Such retrieve operations occur either at initialization (when "
+ "specified in the initialization options), or when writing a Firmware Store from a "
+ "file (the written firmware is immediately re-read as an operation success check).The "
+ "ECC system corrects such errors, however when they occur it is advised to re-write "
+ "the Firmware Store as a preventive measure. As the number of errors increases, the "
+ "firmware eventually becomes impossible to correct. A False value indicates that no "
+ "error was detected during the last retrieve operation from a Firmware Store."
+
+3 all "Logic Device Samples Unsigned" AQMD3_ATTR_LOGIC_DEVICE_SAMPLES_UNSIGNED ViBoolean gs 
+ "When True, directs the LogicDevice to receive unsigned samples values from the ADC."
+
+3 all "Logic Device Stream Mode" AQMD3_ATTR_LOGIC_DEVICE_STREAM_MODE ViInt32 gs LogicDeviceStreamMode
+ "Specifies the mode the Streams are operating in."
+
+3 all "Logic Device Streams Count" AQMD3_ATTR_LOGIC_DEVICE_STREAMS_COUNT ViInt32 g 
+ "Read Only - Number of Streams available in the LogicDevice."
+
+3 all "LogicDeviceMemoryBank"
+
+4 all "Logic Device Memory Bank Access Control" AQMD3_ATTR_LOGIC_DEVICE_MEMORY_BANK_ACCESS_CONTROL ViInt32 gs LogicDeviceMemoryBankAccessControl
+ "Specifies how the MemoryBank accesses are controlled. This value is used only when "
+ "the Acquisition Mode is UserFDK."
+
+4 all "Logic Device Memory Bank Access Mode" AQMD3_ATTR_LOGIC_DEVICE_MEMORY_BANK_ACCESS_MODE ViInt32 gs LogicDeviceMemoryBankAccessMode
+ "When MemoryBank access is controlled by software, specifies how the memory is currently "
+ "accessed."
+
+4 all "Logic Device Memory Bank Count" AQMD3_ATTR_LOGIC_DEVICE_MEMORY_BANK_COUNT ViInt32 g 
+ "Read Only - Number of memory banks in LogicDevice."
+
+4 all "Logic Device Memory Bank Fifo Mode Enabled" AQMD3_ATTR_LOGIC_DEVICE_MEMORY_BANK_FIFO_MODE_ENABLED ViBoolean gs 
+ "Enables the FIFO mode for MemoryBank. Used when streaming."
+
+2 all "Private"
+
+3 all "Private Access Password" AQMD3_ATTR_PRIVATE_ACCESS_PASSWORD ViString s 
+ "This property is private and for Acqiris-internal use only."
+
+3 all "PrivateCalibration"
+
+4 all "User Signal" AQMD3_ATTR_PRIVATE_CALIBRATION_USER_SIGNAL ViString gs 
+ "This property is private and for Acqiris-internal use only."
+
+4 all "PrivateCalibrationStep"
+
+5 all "Private Calibration Step Count" AQMD3_ATTR_PRIVATE_CALIBRATION_STEP_COUNT ViInt32 g 
+
+5 all "Private Calibration Step Dump Waveforms" AQMD3_ATTR_PRIVATE_CALIBRATION_STEP_DUMP_WAVEFORMS ViBoolean gs 
+ "This property is private and for Acqiris-internal use only."
+
+5 all "Private Calibration Step Enabled" AQMD3_ATTR_PRIVATE_CALIBRATION_STEP_ENABLED ViBoolean gs 
+ "This property is private and for Acqiris-internal use only."
+
+5 all "Private Calibration Step Ignore Errors" AQMD3_ATTR_PRIVATE_CALIBRATION_STEP_IGNORE_ERRORS ViBoolean gs 
+ "This property is private and for Acqiris-internal use only."
+
+5 all "Private Calibration Step Use Input Signal" AQMD3_ATTR_PRIVATE_CALIBRATION_STEP_USE_INPUT_SIGNAL ViBoolean gs 
+ "This property is private and for Acqiris-internal use only."
+
+3 all "PrivateFirmware"
+
+4 all "Private Firmware Count" AQMD3_ATTR_PRIVATE_FIRMWARE_COUNT ViInt32 g 
+ "This property is private and for Acqiris-internal use only."
+
+3 all "PrivateStore"
+
+4 all "CompatibleWith" AQMD3_ATTR_PRIVATE_STORE_COMPATIBLE_WITH ViString gs 
+ "This property is private and for Acqiris-internal use only."
+
+4 all "Private Store Bar Code" AQMD3_ATTR_PRIVATE_STORE_BAR_CODE ViString gs 
+ "This property is private and for Acqiris-internal use only."
+
+4 all "Private Store Count" AQMD3_ATTR_PRIVATE_STORE_COUNT ViInt32 g 
+ "This property is private and for Acqiris-internal use only."
+
+4 all "Private Store Part Number" AQMD3_ATTR_PRIVATE_STORE_PART_NUMBER ViString gs 
+ "This property is private and for Acqiris-internal use only."
+
+4 all "Private Store Part Number Revision" AQMD3_ATTR_PRIVATE_STORE_PART_NUMBER_REVISION ViString gs 
+ "This property is private and for Acqiris-internal use only."
+
+4 all "Private Store Production Date" AQMD3_ATTR_PRIVATE_STORE_PRODUCTION_DATE ViString gs 
+ "This property is private and for Acqiris-internal use only."
+
+4 all "Private Store Serial Number" AQMD3_ATTR_PRIVATE_STORE_SERIAL_NUMBER ViString gs 
+ "This property is private and for Acqiris-internal use only."
+
+4 all "Private Store Test Date" AQMD3_ATTR_PRIVATE_STORE_TEST_DATE ViString gs 
+ "This property is private and for Acqiris-internal use only."
+
+4 all "EepromModuleGeneration"
+
+5 all "Eeprom Module Generation Maximum Driver Version" AQMD3_ATTR_EEPROM_MODULE_GENERATION_MAXIMUM_DRIVER_VERSION ViString gs 
+ "This property is private and for Acqiris-internal use only."
+
+5 all "Eeprom Module Generation Options" AQMD3_ATTR_EEPROM_MODULE_GENERATION_OPTIONS ViString gs 
+ "This property is private and for Acqiris-internal use only."
+
+5 all "Eeprom Module Generation Serial Number" AQMD3_ATTR_EEPROM_MODULE_GENERATION_SERIAL_NUMBER ViString gs 
+ "This property is private and for Acqiris-internal use only."
+
+5 all "Eeprom Module Generation Tested Driver Version" AQMD3_ATTR_EEPROM_MODULE_GENERATION_TESTED_DRIVER_VERSION ViString gs 
+ "This property is private and for Acqiris-internal use only."
+
+2 all "Stream"
+
+3 all "Stream Count" AQMD3_ATTR_STREAM_COUNT ViInt32 g 
+
+3 all "Stream Enabled" AQMD3_ATTR_STREAM_ENABLED ViBoolean gs 
+ "Specifies whether the stream is enabled on the instrument."
+
+3 all "Stream Granularity In Bytes" AQMD3_ATTR_STREAM_GRANULARITY_IN_BYTES ViInt64 g 
+ "Indicates the granularity of data for the FetchData operations."
+
+3 all "Stream Max Size In Bytes" AQMD3_ATTR_STREAM_MAX_SIZE_IN_BYTES ViInt64 g 
+ "Indicates the maximal size of data for the FetchData operations."
+
+3 all "Stream Type" AQMD3_ATTR_STREAM_TYPE ViInt32 g StreamType
+ "Indicates the type of the stream."
+
+3 all "Markers"
+
+4 all "Stream Markers Bits Per Marker" AQMD3_ATTR_STREAM_MARKERS_BITS_PER_MARKER ViInt32 g 
+ "Number of bits representing a Marker value."
+
+4 all "Stream Markers Fractional Bits" AQMD3_ATTR_STREAM_MARKERS_FRACTIONAL_BITS ViInt32 g 
+ "Number of fractional bits in the Marker value."
+
+3 all "MinMax"
+
+4 all "Stream MinMax Frame Size" AQMD3_ATTR_STREAM_MINMAX_FRAME_SIZE ViInt64 gs 
+ "Number of samples over which each MimMax pair is computed."
+
+3 all "Samples"
+
+4 all "Stream Samples Bits Per Sample" AQMD3_ATTR_STREAM_SAMPLES_BITS_PER_SAMPLE ViInt32 g 
+ "Returns the number of bits per sample."
+
+4 all "Stream Samples Data Emulation Enabled" AQMD3_ATTR_STREAM_SAMPLES_DATA_EMULATION_ENABLED ViBoolean gs 
+ "Specifies whether the Data Emulation is enabled. If True, the output data are fetched "
+ "from an internal ramp waveform generator. If False, the output data are fetched from "
+ "the digitizer ADC stream."
+
+4 all "Stream Samples Data Emulation Rate" AQMD3_ATTR_STREAM_SAMPLES_DATA_EMULATION_RATE ViReal64 gs 
+ "Specifies the emulated data rate in samples per seconds. Ignored if the Data Emulation "
+ "is disabled."
+
+4 all "Stream Samples Data Truncation Bit Count" AQMD3_ATTR_STREAM_SAMPLES_DATA_TRUNCATION_BIT_COUNT ViInt32 gs 
+ "Specifies the size in bits of an output stream Element. Ignored if DataTruncationEnabled "
+ "is False."
+
+4 all "Stream Samples Data Truncation Enabled" AQMD3_ATTR_STREAM_SAMPLES_DATA_TRUNCATION_ENABLED ViBoolean gs 
+ "Specifies whether the Data Truncation is enabled."
+
+4 all "Stream Samples Data Truncation Keep Msb" AQMD3_ATTR_STREAM_SAMPLES_DATA_TRUNCATION_KEEP_MSB ViBoolean gs 
+ "Specifies whether the output stream Element contains the most significant or the "
+ "least significant bits of the raw digitizer data sample. Ignored if DataTruncationEnabled "
+ "is False."
+
+2 all "Trigger"
+
+3 all "Output"
+
+4 all "Offset" AQMD3_ATTR_TRIGGER_OUTPUT_OFFSET ViReal64 gs 
+ "Specifies the offset in Volts at the trigger output of the digitizer."
+
+4 all "Trigger Output Source" AQMD3_ATTR_TRIGGER_OUTPUT_SOURCE ViString gs 
+ "Select the trigger signal to drive the trigger output connector on the front panel."
+
+3 all "TriggerSource"
+
+4 all "Magnitude"
+
+5 all "Trigger Magnitude Dwell Time Samples" AQMD3_ATTR_TRIGGER_MAGNITUDE_DWELL_TIME_SAMPLES ViInt32 gs 
+ "Positive values of dwell time indicate the number of samples that must be in the "
+ "initial trigger state (e.g. below the low threshold for a rising edge trigger) before "
+ "a trigger will be recognized.  Negative values of dwell time indicate the number "
+ "of samples that must be in the second trigger state before a trigger is recognized."
+
+5 all "Trigger Magnitude Slope" AQMD3_ATTR_TRIGGER_MAGNITUDE_SLOPE ViInt32 gs TriggerSlope
+ "Specifies whether a rising (Positive) or a falling (Negative) magnitude triggers "
+ "the digitizer."
+
+4 all "SelfTrigger"
+
+5 all "Self Trigger Mode" AQMD3_ATTR_SELF_TRIGGER_MODE ViInt32 gs SelfTriggerMode
+ "Defines the self-trigger signal generation mode."
+
+5 all "Self Trigger Pulse Duration" AQMD3_ATTR_SELF_TRIGGER_PULSE_DURATION ViReal64 gs 
+ "Defines the duration of the pulse generated by the self-trigger configured in Armed "
+ "Pulse mode."
+
+5 all "SquareWave"
+
+6 all "Self Trigger Square Wave Duty Cycle" AQMD3_ATTR_SELF_TRIGGER_SQUARE_WAVE_DUTY_CYCLE ViReal64 gs 
+ "Configures the duty cycle of the self-trigger square wave signal. Behavior depends "
+ "on the configuration of the Slope property (e.g. if Slope is set to positive DutyCycle "
+ "defines the percentage that the square wave is in the high state). Units are percentage "
+ "of the period."
+
+6 all "Self Trigger Square Wave Frequency" AQMD3_ATTR_SELF_TRIGGER_SQUARE_WAVE_FREQUENCY ViReal64 gs 
+ "Specifies the frequency of the self-trigger square wave signal. The units are Hertz."
+
+6 all "Self Trigger Square Wave Slope" AQMD3_ATTR_SELF_TRIGGER_SQUARE_WAVE_SLOPE ViInt32 gs TriggerSlope2
+ "Specifies whether a rising or a falling edge of the generated waveform triggers the "
+ "digitizer."
+
+1 all "Reference Oscillator"
+
+2 all "Reference Oscillator External Frequency" AQMD3_ATTR_REFERENCE_OSCILLATOR_EXTERNAL_FREQUENCY ViReal64 gs 
+ "Specifies the frequency of the external signal which is as a frequency reference. "
+ "This value is used only if the Reference Oscillator Source attribute is set to External. "
+ "The units are Hertz."
+
+2 all "Reference Oscillator Output Enabled" AQMD3_ATTR_REFERENCE_OSCILLATOR_OUTPUT_ENABLED ViBoolean gs 
+ "Specifies whether or not the reference frequency signal appears at an output of the "
+ "digitizer."
+
+2 all "Reference Oscillator Source" AQMD3_ATTR_REFERENCE_OSCILLATOR_SOURCE ViInt32 gs ReferenceOscillatorSource
+ "Specifies the reference frequency source used."
+
+1 all "Sample Clock"
+
+2 all "Sample Clock External Divider" AQMD3_ATTR_SAMPLE_CLOCK_EXTERNAL_DIVIDER ViReal64 gs 
+ "Specifies the value by which the external sample clock should be divided.  This value "
+ "is used only if the Sample Clock Source attribute is set to External."
+
+2 all "Sample Clock External Frequency" AQMD3_ATTR_SAMPLE_CLOCK_EXTERNAL_FREQUENCY ViReal64 gs 
+ "Specifies the frequency of the external signal which is as a sample clock. This value "
+ "is used only if the Sample Clock Source attribute is set to External. The units are "
+ "Hertz."
+
+2 all "Sample Clock Output Enabled" AQMD3_ATTR_SAMPLE_CLOCK_OUTPUT_ENABLED ViBoolean gs 
+ "Specifies whether or not the sample clock appears at a reference output of the digitizer."
+
+2 all "Sample Clock Source" AQMD3_ATTR_SAMPLE_CLOCK_SOURCE ViInt32 gs SampleClockSource
+ "Specifies the clock used to pace acquisition sampling."
+
+1 all "TimeReference"
+
+2 all "ResetMode" AQMD3_ATTR_TIME_REFERENCE_RESET_MODE ViInt32 gs TimeResetMode
+ "Specifies how the instrument time is reset."
+
+1 all "Trigger"
+
+2 all "Active Trigger Source" AQMD3_ATTR_ACTIVE_TRIGGER_SOURCE ViString gs 
+ "Specifies the source the digitizer monitors for the trigger event. The value specified "
+ "here must be one of the valid repeated capability names for the TriggerSource repeated "
+ "capability."
+
+2 all "Pretrigger Samples" AQMD3_ATTR_PRETRIGGER_SAMPLES ViInt64 gs 
+ "Not Supported - Specifies the number of samples that must be collected before a trigger "
+ "event will be recognized.  The Pretrigger Samples attribute affects instrument operation "
+ "only when the digitizer requires multiple acquisitions to build a complete waveform. "
+ " If Trigger Holdoff and Pretrigger Samples are are both non-zero, then both conditions "
+ "must be satisfied before the digitizer will accept a trigger."
+
+2 all "Trigger Coupling" AQMD3_ATTR_TRIGGER_COUPLING ViInt32 gs TriggerCoupling
+ "Specifies how the digitizer couples the trigger source."
+
+2 all "Trigger Delay" AQMD3_ATTR_TRIGGER_DELAY ViReal64 gs 
+ "Specifies the length of time from the trigger event to the first point in the waveform "
+ "record. If the value is positive, the first point in the waveform record occurs after "
+ "the trigger event. If the value is negative, the first point in the waveform record "
+ "occurs before the trigger event. The units are seconds."
+
+2 all "Trigger Holdoff" AQMD3_ATTR_TRIGGER_HOLDOFF ViReal64 gs 
+ "Specifies the length of time the digitizer waits after it detects a trigger until "
+ "the digitizer enables the trigger subsystem to detect another trigger. The units "
+ "are seconds. The Trigger Holdoff attribute affects instrument operation only when "
+ "the digitizer requires multiple acquisitions to build a complete waveform. If Trigger "
+ "Holdoff and PreTriggerSamples are are both non-zero, then both conditions must be "
+ "satisfied before the digitizer will accept a trigger."
+
+2 all "Trigger Hysteresis" AQMD3_ATTR_TRIGGER_HYSTERESIS ViReal64 gs 
+ "Specifies the trigger hysteresis in Volts."
+
+2 all "Trigger Level" AQMD3_ATTR_TRIGGER_LEVEL ViReal64 gs 
+ "Specifies the voltage threshold for the trigger sub-system. The units are Volts. "
+ "This attribute affects instrument behavior only when the Trigger Type is set to one "
+ "of the following values: Edge Trigger, Glitch Trigger, or Width Trigger."
+ "This attribute, along with the Trigger Slope, Trigger Source, and Trigger Coupling "
+ "attributes, defines the trigger event when the Trigger Type is set to Edge Trigger."
+
+2 all "Trigger Output Enabled" AQMD3_ATTR_TRIGGER_OUTPUT_ENABLED ViBoolean gs 
+ "Specifies whether or not an accepted trigger appears at an output of the digitizer."
+
+2 all "Trigger Source Count" AQMD3_ATTR_TRIGGER_SOURCE_COUNT ViInt32 g 
+ "Read Only - The number of trigger sources."
+
+2 all "Trigger Type" AQMD3_ATTR_TRIGGER_TYPE ViInt32 gs TriggerType
+ "The kind of event that triggers the digitizer."
+
+2 all "Edge Triggering"
+
+3 all "Trigger Slope" AQMD3_ATTR_TRIGGER_SLOPE ViInt32 gs TriggerSlope
+ "Specifies whether a rising or a falling edge triggers the digitizer.  This attribute "
+ "affects instrument operation only when the Trigger Type attribute is set to Edge "
+ "Trigger."
+
+2 all "Glitch Triggering"
+
+3 all "Glitch Trigger Condition" AQMD3_ATTR_GLITCH_TRIGGER_CONDITION ViInt32 gs GlitchCondition
+ "Not Supported - Specifies the glitch condition. This attribute determines whether "
+ "the glitch trigger happens when the digitizer detects a pulse with a width less than "
+ "or greater than the width value."
+
+3 all "Glitch Trigger Polarity" AQMD3_ATTR_GLITCH_TRIGGER_POLARITY ViInt32 gs GlitchPolarity
+ "Not Supported - Specifies the polarity of the glitch that triggers the digitizer."
+
+3 all "Glitch Trigger Width" AQMD3_ATTR_GLITCH_TRIGGER_WIDTH ViReal64 gs 
+ "Not Supported - Specifies the glitch width. The units are seconds. The digitizer "
+ "triggers when it detects a pulse with a width less than or greater than this value, "
+ "depending on the Glitch Condition attribute."
+
+2 all "Multi Trigger"
+
+3 all "Trigger Source List" AQMD3_ATTR_TRIGGER_SOURCE_LIST ViString gs 
+ "Not Supported - A comma separated list of source names to be used in a multi trigger "
+ "scenario.  This attribute only affects instrument behavior when the Trigger Source "
+ "Operator attribute is set to AND or OR.  When Trigger Source Operator is set to AND, "
+ "the trigger conditions associated with each source in this list must be simultaneously "
+ "satsified in order to trigger the digitizer.  When Trigger Source Operator is set "
+ "to OR, the first trigger source in the list that satisfies its trigger conditions "
+ "will trigger the digitizer.  Any valid name used for the Trigger Source attribute "
+ "may be used in this list.  A trigger source may appear only once in the list.  If "
+ "a name in the list is not recognized, the driver returns the Unknown Channel Name "
+ "error.  See IVI-3.2 for the definition of this error."
+
+3 all "Trigger Source Operator" AQMD3_ATTR_TRIGGER_SOURCE_OPERATOR ViInt32 gs TriggerSourceOperator
+ "Not Supported - Specifies the boolean operation to apply to the arm sources specified "
+ "by the Trigger Source List attribute.  See the definition of that attribute for details."
+
+2 all "Runt Triggering"
+
+3 all "Runt Trigger High Threshold" AQMD3_ATTR_RUNT_TRIGGER_HIGH_THRESHOLD ViReal64 gs 
+ "Not Supported - The high threshold the digitizer uses for runt triggering.  The units "
+ "are Volts."
+
+3 all "Runt Trigger Low Threshold" AQMD3_ATTR_RUNT_TRIGGER_LOW_THRESHOLD ViReal64 gs 
+ "Not Supported - The low threshold the digitizer uses for runt triggering.  The units "
+ "are Volts."
+
+3 all "Runt Trigger Polarity" AQMD3_ATTR_RUNT_TRIGGER_POLARITY ViInt32 gs RuntPolarity
+ "Not Supported - Specifies the polarity of the runt that triggers the digitizer."
+
+2 all "TV Triggering"
+
+3 all "TV Trigger Event" AQMD3_ATTR_TV_TRIGGER_EVENT ViInt32 gs TVTriggerEvent
+ "Not Supported - Specifies the event on which the digitizer triggers."
+
+3 all "TV Trigger Line Number" AQMD3_ATTR_TV_TRIGGER_LINE_NUMBER ViInt32 gs 
+ "Not Supported - Specifies the line on which the digitizer triggers. The driver uses "
+ "this attribute when the TV Trigger Event is set to TV Event Line Number. The line "
+ "number setting is independent of the field. This means that to trigger on the first "
+ "line of the second field, the user must configure the line number to the value of "
+ "263 (if we presume that field one had 262 lines)."
+
+3 all "TV Trigger Polarity" AQMD3_ATTR_TV_TRIGGER_POLARITY ViInt32 gs TVTriggerPolarity
+ "Not Supported - Specifies the polarity of the TV signal."
+
+3 all "TV Trigger Signal Format" AQMD3_ATTR_TV_TRIGGER_SIGNAL_FORMAT ViInt32 gs TVSignalFormat
+ "Not Supported - Specifies the format of TV signal on which the digitizer triggers."
+
+2 all "Width Triggering"
+
+3 all "Width Trigger Condition" AQMD3_ATTR_WIDTH_TRIGGER_CONDITION ViInt32 gs WidthCondition
+ "Not Supported - Specifies whether a pulse that is within or outside the high and "
+ "low thresholds triggers the digitizer. The end-user specifies the high and low thresholds "
+ "with the Width High Threshold and Width Low Threshold attributes."
+
+3 all "Width Trigger High Threshold" AQMD3_ATTR_WIDTH_TRIGGER_HIGH_THRESHOLD ViReal64 gs 
+ "Not Supported - Specifies the high width threshold time in seconds."
+
+3 all "Width Trigger Low Threshold" AQMD3_ATTR_WIDTH_TRIGGER_LOW_THRESHOLD ViReal64 gs 
+ "Not Supported - Specifies the low width threshold time in seconds."
+
+3 all "Width Trigger Polarity" AQMD3_ATTR_WIDTH_TRIGGER_POLARITY ViInt32 gs WidthPolarity
+ "Not Supported - Specifies the polarity of the pulse that triggers the digitizer."
+
+2 all "Window Triggering"
+
+3 all "Window Trigger Condition" AQMD3_ATTR_WINDOW_TRIGGER_CONDITION ViInt32 gs WindowCondition
+ "Not Supported - Specifies whether a signal that is entering or leaving the voltage "
+ "window defined by the high and low thresholds triggers the digitizer. The end-user "
+ "specifies the high and low thresholds with the Window High Threshold and Window Low "
+ "Threshold attributes."
+
+3 all "Window Trigger High Threshold" AQMD3_ATTR_WINDOW_TRIGGER_HIGH_THRESHOLD ViReal64 gs 
+ "Not Supported - Specifies the high window threshold voltage in Volts."
+
+3 all "Window Trigger Low Threshold" AQMD3_ATTR_WINDOW_TRIGGER_LOW_THRESHOLD ViReal64 gs 
+ "Not Supported - Specifies the low window threshold voltage in Volts."
+
+1 all "Utility"
+
+2 all "Temperature"
+
+3 all "Board Temperature" AQMD3_ATTR_BOARD_TEMPERATURE ViReal64 g 
+ "Read Only - Indicates the temperature of the entire board.  The units are governed "
+ "by the Temperature Units attribute."
+
+3 all "Channel Temperature" AQMD3_ATTR_CHANNEL_TEMPERATURE ViReal64 g 
+ "Read Only - Indicates the temperature of the channel.  The units are governed by "
+ "the Temperature Units attribute."
+
+3 all "Temperature Units" AQMD3_ATTR_TEMPERATURE_UNITS ViInt32 gs TemperatureUnits
+ "Specifies the temperature units returned by the Board Temperature and the Channel "
+ "Temperature attributes."
+
+1 all "Waveform Acquisition"
+
+2 all "Is Idle" AQMD3_ATTR_IS_IDLE ViInt32 g AcquisitionStatusResult
+ "Read Only - Returns whether the device is currently in the Idle state.  If the driver "
+ "cannot query the digitizer to return its state, the driver returns the value Unknown."
+
+2 all "Is Measuring" AQMD3_ATTR_IS_MEASURING ViInt32 g AcquisitionStatusResult
+ "Read Only - Returns whether the device is currently in the Measuring state.  If the "
+ "driver cannot query the digitizer to return its state, the driver returns the value "
+ "Unknown."
+
+2 all "Is Waiting For Trigger" AQMD3_ATTR_IS_WAITING_FOR_TRIGGER ViInt32 g AcquisitionStatusResult
+ "Read Only - Returns whether the device is currently in the Waiting For Trigger state. "
+ " If the driver cannot query the digitizer to return its state, the driver returns "
+ "the value Unknown."
+
+2 all "Max First Valid Point Value" AQMD3_ATTR_MAX_FIRST_VALID_POINT_VAL ViInt64 gs 
+ "Returns the maximum value that the First Valid Point parameter of the readout functions "
+ "may assume. This value is necessary to calculate the minimum size of the required "
+ "data buffer to retrieved the entire acquisition."
+
+2 all "Max Samples Per Channel" AQMD3_ATTR_MAX_SAMPLES_PER_CHANNEL ViInt64 g 
+ "Read Only - Returns the maximum number of samples per channel that can be captured."
+
+2 all "Min Record Size" AQMD3_ATTR_MIN_RECORD_SIZE ViInt64 g 
+ "Read Only - Indicates the minimum waveform record size.  If the digitizer can support "
+ "any arbitrary size record, then this attribute returns 1."
+
+2 all "Num Acquired Records" AQMD3_ATTR_NUM_ACQUIRED_RECORDS ViInt64 g 
+ "Read Only - Gets the total number of records acquired since the acquistion was last "
+ "initiated.  You may call this method while an acquisition is in progress."
+
+2 all "Num Records To Acquire" AQMD3_ATTR_NUM_RECORDS_TO_ACQUIRE ViInt64 gs 
+ "Specifies the number of waveform records to acquire.  One waveform record is acquired "
+ "for each recognized trigger."
+
+2 all "Record Size" AQMD3_ATTR_RECORD_SIZE ViInt64 gs 
+ "Specifies the number of samples to acquire in each waveform record."
+
+2 all "Sample Rate" AQMD3_ATTR_SAMPLE_RATE ViReal64 gs 
+ "Specifies the rate of the sample clock in samples per second.  This number represents "
+ "the inverse of the interval between samples in the acquisition record."
+
+2 all "Time Interleaved Channel List Auto" AQMD3_ATTR_TIME_INTERLEAVED_CHANNEL_LIST_AUTO ViBoolean gs 
+ "Specifies whether or not the instrument should automatically combine enabled channels "
+ "to satisfy user-specified sample rates.  When set to True, the instrument will automatically "
+ "combine channels to meet the sample rate requirements specified via the Sample Rate "
+ "attribute."
